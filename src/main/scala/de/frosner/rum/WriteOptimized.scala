@@ -29,7 +29,7 @@ object WriteOptimized {
 
   object WriteOptimizedFactory extends DataStructureFactory[WriteOptimized] {
 
-    override def bulkCreate(baseData: Seq[Int]): WriteOptimized =
+    override def bulkCreate(baseData: Set[Int]): WriteOptimized =
       new WriteOptimized(baseData.map(i => (InsertOp: Op, i)).toList)
 
   }
